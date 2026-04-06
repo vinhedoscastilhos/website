@@ -1,8 +1,24 @@
 'use strict';
 
+//Canvas Menu
+$(document).ready(function () {
+// Abre o menu
+$(document).on('click', '.canvas__open', function () {
+    $(".offcanvas-menu-wrapper").addClass("active");
+    $(".offcanvas-menu-overlay").addClass("active");
+});
+
+// Fecha o menu (clicando no X ou fora dele)
+$(document).on('click', '.offcanvas-menu-overlay, .canvas__close', function () {
+    $(".offcanvas-menu-wrapper").removeClass("active");
+    $(".offcanvas-menu-overlay").removeClass("active");
+});
+});
+
 (function ($) {
 
-    /*------------------
+   
+/*------------------
         Preloader
     --------------------*/
     $(window).on('load', function () {
@@ -18,20 +34,6 @@
         $(this).css('background-image', 'url(' + bg + ')');
     });
 
-    //Canvas Menu
-$(document).ready(function () {
-    // Abre o menu
-    $(document).on('click', '.canvas__open', function () {
-        $(".offcanvas-menu-wrapper").addClass("active");
-        $(".offcanvas-menu-overlay").addClass("active");
-    });
-
-    // Fecha o menu (clicando no X ou fora dele)
-    $(document).on('click', '.offcanvas-menu-overlay, .canvas__close', function () {
-        $(".offcanvas-menu-wrapper").removeClass("active");
-        $(".offcanvas-menu-overlay").removeClass("active");
-    });
-});
 
     /*------------------
 		Navigation
