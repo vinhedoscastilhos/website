@@ -736,6 +736,21 @@
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/jquery.slicknav.js"></script>
 <script src="js/owl.carousel.min.js"></script> <script src="js/main.js"></script>
+<script>
+    // Código de emergência para o menu funcionar independente do main.js
+    $(document).ready(function() {
+        $(document).on('click', '.canvas__open', function() {
+            $(".offcanvas-menu-wrapper").addClass("active");
+            $(".offcanvas-menu-overlay").addClass("active");
+            console.log("Menu aberto via script de emergência");
+        });
+
+        $(document).on('click', '.offcanvas-menu-overlay, .canvas__close', function() {
+            $(".offcanvas-menu-wrapper").removeClass("active");
+            $(".offcanvas-menu-overlay").removeClass("active");
+        });
+    });
+</script>
 </body>
 
 </html>
