@@ -2738,6 +2738,11 @@ ol {
 	.blog__sidebar {
 		padding-left: 0;
 	}
+	.offcanvas-menu-wrapper,
+    .offcanvas-menu-overlay,
+    .canvas__open {
+        display: none !important;
+    }
 }
 
 /* Tablet Device = 768px */
@@ -2813,16 +2818,14 @@ ol {
 		width: 50px;
 		left: -67px;
 	}
-	.canvas__open {
+.canvas__open {
         display: block !important;
         position: absolute;
-        right: 20px; /* Joga o hambúrguer para a ponta direita */
-        top: 50%;
-        transform: translateY(-50%); /* Centraliza verticalmente com a logo */
-        font-size: 25px;
-        color: #111111;
-        z-index: 9999; /* Garante que fique por cima de tudo */
+        right: 20px;
+        top: 30px; /* Ajuste para alinhar com sua logo */
+        font-size: 22px;
         cursor: pointer;
+        z-index: 999;
     }
 	.offcanvas-menu-overlay {
 		position: fixed;
@@ -2838,7 +2841,7 @@ ol {
 		transition: all, 0.5s;
 		visibility: hidden;
 	}
-	
+
 .offcanvas-menu-overlay.active {
     display: block !important;
     visibility: visible !important;
@@ -2865,7 +2868,8 @@ ol {
     	left: 0 !important;
     	opacity: 1 !important;
     	visibility: visible !important;
-    	z-index: 99999 !important;
+    	z-index: 9999 !important;
+		display: block;
 	}
 	.offcanvas__menu {
 		display: none;
