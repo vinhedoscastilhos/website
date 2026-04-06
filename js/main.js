@@ -19,15 +19,19 @@
     });
 
     //Canvas Menu
-    $(".canvas__open").on('click', function () {
+$(document).ready(function () {
+    // Abre o menu
+    $(document).on('click', '.canvas__open', function () {
         $(".offcanvas-menu-wrapper").addClass("active");
         $(".offcanvas-menu-overlay").addClass("active");
     });
 
-    $(".offcanvas-menu-overlay").on('click', function () {
+    // Fecha o menu (clicando no X ou fora dele)
+    $(document).on('click', '.offcanvas-menu-overlay, .canvas__close', function () {
         $(".offcanvas-menu-wrapper").removeClass("active");
         $(".offcanvas-menu-overlay").removeClass("active");
     });
+});
 
     /*------------------
 		Navigation
