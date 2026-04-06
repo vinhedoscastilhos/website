@@ -478,8 +478,10 @@ ol {
 }
 
 .offcanvas-menu-wrapper {
-	display: none;
-	z-index: 9999 !important; /* Força o menu a ficar na frente de tudo */
+    display: block !important; /* Remove o display:none do template */
+    left: -300px; /* Começa fora da tela */
+    transition: all 0.3s;
+    z-index: 99999 !important;
 }
 
 .canvas__open {
@@ -2836,9 +2838,14 @@ ol {
 		transition: all, 0.5s;
 		visibility: hidden;
 	}
-	.offcanvas-menu-overlay.active {
-		visibility: visible;
-	}
+	
+.offcanvas-menu-overlay.active {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 99998 !important;
+}
+
 	.offcanvas-menu-wrapper {
 		position: fixed;
 		left: -300px;
