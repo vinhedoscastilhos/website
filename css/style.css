@@ -2817,20 +2817,16 @@ ol {
 		left: -67px;
 	}
 	.canvas__open {
-		display: block;
-		font-size: 22px;
-		color: #ffffff;
-		height: 35px;
-		width: 35px;
-		line-height: 35px;
-		text-align: center;
-		border: 1px solid #323232;
-		border-radius: 2px;
-		cursor: pointer;
-		position: absolute;
-		right: 15px;
-		top: 26px;
-	}
+        display: block !important;
+        position: absolute;
+        right: 20px; /* Joga o hambúrguer para a ponta direita */
+        top: 50%;
+        transform: translateY(-50%); /* Centraliza verticalmente com a logo */
+        font-size: 25px;
+        color: #111111;
+        z-index: 9999; /* Garante que fique por cima de tudo */
+        cursor: pointer;
+    }
 	.offcanvas-menu-overlay {
 		position: fixed;
 		left: 0;
@@ -3017,8 +3013,11 @@ ol {
         display: none !important;
     }
 	.header .container {
-		position: relative;
-	}
+        position: relative;
+        display: block;
+        /* text-align: center; */
+        padding: 20px 0;
+    }
 }
 
 /* Wide Mobile = 480px */
