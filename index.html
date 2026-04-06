@@ -737,29 +737,33 @@
 <script src="js/jquery.slicknav.js"></script>
 <script src="js/owl.carousel.min.js"></script> <script src="js/main.js"></script>
 <script>
-    window.addEventListener('load', function() {
-        var btn = document.querySelector('.canvas__open');
-        var menu = document.querySelector('.offcanvas-menu-wrapper');
-        var overlay = document.querySelector('.offcanvas-menu-overlay');
-        var close = document.querySelector('.canvas__close');
+document.addEventListener('DOMContentLoaded', function() {
+    var btnAbrir = document.querySelector('.canvas__open');
+    var btnFechar = document.querySelector('.canvas__close');
+    var menuLateral = document.querySelector('.offcanvas-menu-wrapper');
+    var overlay = document.querySelector('.offcanvas-menu-overlay');
 
-        if (btn && menu && overlay) {
-            btn.addEventListener('click', function() {
-                menu.classList.add('active');
+    if (btnAbrir && menuLateral && overlay) {
+        // Função para abrir
+        btnAbrir.onclick = function(e) {
+            e.preventDefault();
+            menuLateral.style.display = 'block'; // Garante que não está 'none'
+            setTimeout(function() {
+                menuLateral.classList.add('active');
                 overlay.classList.add('active');
-            });
+            }, 10);
+        };
 
-            // Fecha ao clicar no X ou no fundo escuro
-            [overlay, close].forEach(function(el) {
-                if(el) {
-                    el.addEventListener('click', function() {
-                        menu.classList.remove('active');
-                        overlay.classList.remove('active');
-                    });
-                }
-            });
-        }
-    });
+        // Função para fechar
+        var fecharMenu = function() {
+            menuLateral.classList.remove('active');
+            overlay.classList.remove('active');
+        };
+
+        btnFechar.onclick = fecharMenu;
+        overlay.onclick = fecharMenu;
+    }
+});
 </script>
 </body>
 
