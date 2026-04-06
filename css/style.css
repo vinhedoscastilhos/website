@@ -2742,6 +2742,12 @@ ol {
     .offcanvas-menu-overlay,
     .canvas__open {
         display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        opacity: 0 !important;
+        pointer-events: none !important; /* Impede cliques acidentais */
     }
 }
 
@@ -2820,12 +2826,11 @@ ol {
 	}
 .canvas__open {
         display: block !important;
+        /* Se o ícone estiver 'voando' no topo, ajuste o posicionamento abaixo */
         position: absolute;
         right: 20px;
-        top: 30px; /* Ajuste para alinhar com sua logo */
-        font-size: 22px;
-        cursor: pointer;
-        z-index: 999;
+        top: 35px; 
+        z-index: 99;
     }
 	.offcanvas-menu-overlay {
 		position: fixed;
@@ -2848,7 +2853,6 @@ ol {
     opacity: 1 !important;
     z-index: 99998 !important;
 }
-
 	.offcanvas-menu-wrapper {
 		position: fixed;
 		left: -300px;
