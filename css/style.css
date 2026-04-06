@@ -483,16 +483,11 @@ ol {
 }
 
 .canvas__open {
-    display: block !important;
-    position: absolute;
-    right: 15px; /* Distância da borda direita */
-    top: 50%; /* Move para o meio */
-    transform: translateY(-50%); /* Ajuste fino para centralizar verticalmente */
-    font-size: 26px;
-    color: #111111;
-    cursor: pointer;
-    z-index: 999;
-    line-height: 1; /* Remove espaços extras de linha */
+    cursor: pointer !important;
+    z-index: 1000 !important;
+    position: absolute !important;
+    right: 20px;
+    top: 35px; /* Ajuste para alinhar com sua logo */
 }
 
 /*---------------------
@@ -2860,8 +2855,10 @@ ol {
 		opacity: 0;
 	}
 	.offcanvas-menu-wrapper.active {
-		opacity: 1;
-		left: 0;
+    	left: 0 !important;
+    	opacity: 1 !important;
+    	visibility: visible !important;
+    	z-index: 99999 !important;
 	}
 	.offcanvas__menu {
 		display: none;
@@ -3152,7 +3149,10 @@ ol {
 		visibility: hidden;
 	}
 	.offcanvas-menu-overlay.active {
-		visibility: visible;
+    	display: block !important;
+    	visibility: visible !important;
+    	opacity: 1 !important;
+    	z-index: 99998 !important;
 	}
 	.offcanvas-menu-wrapper {
 		position: fixed;
