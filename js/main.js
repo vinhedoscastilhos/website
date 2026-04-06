@@ -1,23 +1,44 @@
 'use strict';
 
-//Canvas Menu
-$(document).ready(function () {
-// Abre o menu
-$(document).on('click', '.canvas__open', function () {
-    $(".offcanvas-menu-wrapper").addClass("active");
-    $(".offcanvas-menu-overlay").addClass("active");
-});
-
-// Fecha o menu (clicando no X ou fora dele)
-$(document).on('click', '.offcanvas-menu-overlay, .canvas__close', function () {
-    $(".offcanvas-menu-wrapper").removeClass("active");
-    $(".offcanvas-menu-overlay").removeClass("active");
-});
-});
-
 (function ($) {
+    /*------------------
+        SOLUÇÃO: Menu Mobile (Colocado no topo para evitar bloqueios)
+    --------------------*/
+    $(document).on('click', '.canvas__open', function () {
+        $(".offcanvas-menu-wrapper").addClass("active");
+        $(".offcanvas-menu-overlay").addClass("active");
+    });
 
-   
+    $(document).on('click', '.offcanvas-menu-overlay, .canvas__close', function () {
+        $(".offcanvas-menu-wrapper").removeClass("active");
+        $(".offcanvas-menu-overlay").removeClass("active");
+    });
+
+    /*------------------
+        Preloader
+    --------------------*/
+    $(window).on('load', function () {
+        $(".loader").fadeOut();
+        $("#preloder").delay(200).fadeOut("slow");
+    });
+
+    /*------------------
+        Gallery Slider (Com proteção contra erro)
+    --------------------*/
+    if ($.fn.owlCarousel) { // Só executa se o plugin estiver carregado
+        $(".gallery__slider").owlCarousel({
+            loop: true,
+            margin: 10,
+            items: 4,
+            dots: false,
+            smartSpeed: 1200,
+            autoHeight: false,
+            autoplay: true
+        });
+    } else {
+        console.warn("Aviso: owlCarousel não carregado. Pulando para não travar o site.");
+    }
+
 /*------------------
         Preloader
     --------------------*/
