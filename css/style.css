@@ -2738,17 +2738,16 @@ ol {
 	.blog__sidebar {
 		padding-left: 0;
 	}
-	.offcanvas-menu-wrapper,
+	.offcanvas-menu-wrapper, 
     .offcanvas-menu-overlay,
-    .canvas__open {
+    .canvas__open,
+    #mobile-menu-wrap {
         display: none !important;
         visibility: hidden !important;
-        height: 0 !important;
-        margin: 0 !important;
-        padding: 0 !important;
         opacity: 0 !important;
-        pointer-events: none !important; /* Impede cliques acidentais */
-    }
+        height: 0 !important;
+        position: absolute !important;
+        pointer-events: none !important;
 }
 
 /* Tablet Device = 768px */
