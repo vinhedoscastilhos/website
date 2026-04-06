@@ -479,6 +479,7 @@ ol {
 
 .offcanvas-menu-wrapper {
 	display: none;
+	z-index: 9999 !important; /* Força o menu a ficar na frente de tudo */
 }
 
 .canvas__open {
@@ -2829,7 +2830,7 @@ ol {
 		width: 100%;
 		background: rgba(0, 0, 0, 0.7);
 		content: "";
-		z-index: 98;
+		z-index: 9998 !important;
 		-webkit-transition: all, 0.5s;
 		-o-transition: all, 0.5s;
 		transition: all, 0.5s;
@@ -3123,7 +3124,8 @@ ol {
 		border: 1px solid #323232;
 		border-radius: 2px;
 		cursor: pointer;
-		position: absolute;
+		z-index: 999;
+    	position: relative;
 		right: 15px;
 		top: 26px;
 	}
