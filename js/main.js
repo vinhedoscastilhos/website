@@ -40,29 +40,29 @@
     /*--------------------------
         Gallery Slider
     ----------------------------*/
-    $(".gallery__slider").owlCarousel({
-        loop: true,
-        margin: 10,
-        items: 4,
-        dots: false,
-        smartSpeed: 1200,
-        autoHeight: false,
-        autoplay: true,
-        responsive: {
-            992: {
-                items: 4
-            },
-            768: {
-                items: 3
-            },
-            576: {
-                items: 2
-            },
-            0: {
-                items: 1
-            }
-        }
-    });
+    // $(".gallery__slider").owlCarousel({
+    //     loop: true,
+    //     margin: 10,
+    //     items: 4,
+    //     dots: false,
+    //     smartSpeed: 1200,
+    //     autoHeight: false,
+    //     autoplay: true,
+    //     responsive: {
+    //         992: {
+    //             items: 4
+    //         },
+    //         768: {
+    //             items: 3
+    //         },
+    //         576: {
+    //             items: 2
+    //         },
+    //         0: {
+    //             items: 1
+    //         }
+    //     }
+    // });
 
     /*--------------------------
         Room Pic Slider
@@ -137,29 +137,29 @@
     /*--------------------------
         Logo Slider
     ----------------------------*/
-    $(".logo__carousel").owlCarousel({
-        loop: true,
-        margin: 100,
-        items: 5,
-        dots: false,
-        smartSpeed: 1200,
-        autoHeight: false,
-        autoplay: false,
-        responsive: {
-            992: {
-                items: 5
-            },
-            768: {
-                items: 3
-            },
-            320: {
-                items: 2
-            },
-            0: {
-                items: 1
-            }
-        }
-    });
+    // $(".logo__carousel").owlCarousel({
+    //     loop: true,
+    //     margin: 100,
+    //     items: 5,
+    //     dots: false,
+    //     smartSpeed: 1200,
+    //     autoHeight: false,
+    //     autoplay: false,
+    //     responsive: {
+    //         992: {
+    //             items: 5
+    //         },
+    //         768: {
+    //             items: 3
+    //         },
+    //         320: {
+    //             items: 2
+    //         },
+    //         0: {
+    //             items: 1
+    //         }
+    //     }
+    // });
 
     /*--------------------------
         Select
