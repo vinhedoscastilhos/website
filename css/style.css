@@ -482,8 +482,16 @@ ol {
 	z-index: 9999 !important; /* Força o menu a ficar na frente de tudo */
 }
 
+/* Ajuste de posicionamento do botão Hambúrguer */
 .canvas__open {
-	display: none;
+    display: block !important;
+    position: absolute;
+    right: 20px; /* Ajuste a distância da direita */
+    top: 30px;   /* Ajuste a altura para alinhar com a sua logo */
+    z-index: 999;
+    font-size: 24px;
+    cursor: pointer;
+    color: #111111; /* Cor do ícone */
 }
 
 /*---------------------
@@ -2830,7 +2838,7 @@ ol {
 		width: 100%;
 		background: rgba(0, 0, 0, 0.7);
 		content: "";
-		z-index: 9998 !important;
+		z-index: 9999 !important;
 		-webkit-transition: all, 0.5s;
 		-o-transition: all, 0.5s;
 		transition: all, 0.5s;
@@ -2847,7 +2855,7 @@ ol {
 		background: #1d1c1c;
 		padding: 50px 20px 30px 30px;
 		display: block;
-		z-index: 99;
+		z-index: 10000 !important;
 		overflow-y: auto;
 		-webkit-transition: all, 0.5s;
 		-o-transition: all, 0.5s;
@@ -3004,9 +3012,9 @@ ol {
 	.header__top {
 		display: none;
 	}
-	.header__nav {
-		display: none;
-	}
+	.header__menu, .header__nav {
+        display: none !important;
+    }
 	.header .container {
 		position: relative;
 	}
