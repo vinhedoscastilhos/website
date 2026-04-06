@@ -482,16 +482,17 @@ ol {
 	z-index: 9999 !important; /* Força o menu a ficar na frente de tudo */
 }
 
-/* Ajuste de posicionamento do botão Hambúrguer */
 .canvas__open {
     display: block !important;
     position: absolute;
-    right: 20px; /* Ajuste a distância da direita */
-    top: 30px;   /* Ajuste a altura para alinhar com a sua logo */
-    z-index: 999;
-    font-size: 24px;
+    right: 15px; /* Distância da borda direita */
+    top: 50%; /* Move para o meio */
+    transform: translateY(-50%); /* Ajuste fino para centralizar verticalmente */
+    font-size: 26px;
+    color: #111111;
     cursor: pointer;
-    color: #111111; /* Cor do ícone */
+    z-index: 999;
+    line-height: 1; /* Remove espaços extras de linha */
 }
 
 /*---------------------
@@ -3319,11 +3320,22 @@ ol {
 	.header__top {
 		display: none;
 	}
+	.header__logo {
+        text-align: center;
+        width: 100%;
+    }
+	.header__logo img {
+        max-width: 150px; /* Ajuste o tamanho da logo no mobile se necessário */
+    }
 	.header__nav {
 		display: none;
 	}
 	.header .container {
-		position: relative;
+    	position: relative;
+    	display: flex;
+    	align-items: center; /* Alinha verticalmente o conteúdo que estiver no flex */
+    	justify-content: center; /* Mantém a logo centralizada */
+    	min-height: 80px; /* Ajuste conforme a altura da sua logo */
 	}
 	.footer__copyright__text {
 		text-align: center;
