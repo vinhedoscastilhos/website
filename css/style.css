@@ -2738,16 +2738,11 @@ ol {
 	.blog__sidebar {
 		padding-left: 0;
 	}
-	.offcanvas-menu-wrapper, 
+	.offcanvas-menu-wrapper,
     .offcanvas-menu-overlay,
-    .canvas__open,
-    #mobile-menu-wrap {
+    .canvas__open {
         display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-        height: 0 !important;
-        position: absolute !important;
-        pointer-events: none !important;
+    }
 }
 
 /* Tablet Device = 768px */
@@ -2825,11 +2820,12 @@ ol {
 	}
 .canvas__open {
         display: block !important;
-        /* Se o ícone estiver 'voando' no topo, ajuste o posicionamento abaixo */
         position: absolute;
         right: 20px;
-        top: 35px; 
-        z-index: 99;
+        top: 30px; /* Ajuste para alinhar com sua logo */
+        font-size: 22px;
+        cursor: pointer;
+        z-index: 999;
     }
 	.offcanvas-menu-overlay {
 		position: fixed;
