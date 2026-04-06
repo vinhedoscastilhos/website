@@ -21,7 +21,23 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
 
-</head>
+    <style>
+    @media (min-width: 992px) {
+        .offcanvas-menu-wrapper, 
+        .offcanvas-menu-overlay, 
+        .canvas__open, 
+        #mobile-menu-wrap {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            position: absolute !important;
+            left: -9999px !important;
+            height: 0 !important;
+            pointer-events: none !important;
+        }
+    }
+    </style>
+    </head>
 
 <body>
     <!-- Page Preloder -->
