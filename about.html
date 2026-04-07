@@ -12,15 +12,33 @@
 	<link rel="canonical" href="https://www.vinhedoscastilhos.com"/>
 
     <!-- Css Styles -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
     <link rel="stylesheet" href="css/nice-select.css" type="text/css">
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+
+    <style>
+    @media (min-width: 992px) {
+        .offcanvas-menu-wrapper, 
+        .offcanvas-menu-overlay, 
+        .canvas__open, 
+        #mobile-menu-wrap {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            position: absolute !important;
+            left: -9999px !important;
+            height: 0 !important;
+            pointer-events: none !important;
+        }
+    }
+    </style>
+
 </head>
 
 <body>
@@ -30,16 +48,16 @@
     </div> -->
 
     <!-- Offcanvas Menu Begin -->
-    <!-- <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__logo">
             <a href="./index.html"><img src="img/logo.png" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__btn__widget">
-            <a href="#">Book Now <span class="arrow_right"></span></a>
+            <a href="#">Reservas em breve <span class="arrow_right"></span></a>
         </div>
-        <div class="offcanvas__widget">
+        <!-- <div class="offcanvas__widget">
             <ul>
                 <li><span class="icon_pin_alt"></span> 96 Ernser Vista Suite 437, NY, US</li>
                 <li><span class="icon_phone"></span> (123) 456-78-910</li>
@@ -59,8 +77,8 @@
                 <li><a href="#">Login</a></li>
                 <li><a href="#">Register</a></li>
             </ul>
-        </div>
-    </div> -->
+        </div> -->
+    </div>
     <!-- Offcanvas Menu End -->
 
     <!-- Header Section Begin -->
